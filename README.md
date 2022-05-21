@@ -1,5 +1,5 @@
 # Timeblock
-This week we needed to cerate a simple calender application that allowed the user to save events for each hour of the day
+This week we needed to create a simple calender application that allowed the user to save events for each hour of the day
 We needed to save the events to local storage and then get those events from the local storage and set them to the proper
 blocks when the page is refreshed.
 
