@@ -108,31 +108,20 @@ if (currentHour > hour6) {
 }
 
 saveBtn.on("click", function() {
-    let time = $(this).siblings(".time").text();
-    let hourText = $(this).siblings(".text").val();
+    let text = $(this).siblings(".text").val();
+    let time = $(this).parent().attr("id");
 
-    localStorage.setItem(time, hourText);
+    localStorage.setItem(time, text);
 })
 
-function loadPlanner() {
-    $(".time").each(function() {
-        let currentHour = $(this).text();
-        let currentText = localStorage.getItem(currentHour);
-
-        if(currentText !== null) {
-            $(this).siblings(".text")
-        }
-    })
-}
-
-$("#hour8Text").val(localStorage.getItem("hour8"));
-$("#hour9Text").val(localStorage.getItem("hour9"));
-$("#hour10Text").val(localStorage.getItem("hour10"));
-$("#hour11Text").val(localStorage.getItem("hour11"));
-$("#hour12Text").val(localStorage.getItem("hour12"));
-$("#hour1Text").val(localStorage.getItem("hour1"));
-$("#hour2Text").val(localStorage.getItem("hour2"));
-$("#hour3Text").val(localStorage.getItem("hour3"));
-$("#hour4Text").val(localStorage.getItem("hour4"));
-$("#hour5Text").val(localStorage.getItem("hour5"));
-$("#hour6Text").val(localStorage.getItem("hour6"));
+$("#hour8Text").val(localStorage.getItem("hour-8"));
+$("#hour9Text").val(localStorage.getItem("hour-9"));
+$("#hour10Text").val(localStorage.getItem("hour-10"));
+$("#hour11Text").val(localStorage.getItem("hour-11"));
+$("#hour12Text").val(localStorage.getItem("hour-12"));
+$("#hour1Text").val(localStorage.getItem("hour-1"));
+$("#hour2Text").val(localStorage.getItem("hour-2"));
+$("#hour3Text").val(localStorage.getItem("hour-3"));
+$("#hour4Text").val(localStorage.getItem("hour-4"));
+$("#hour5Text").val(localStorage.getItem("hour-5"));
+$("#hour6Text").val(localStorage.getItem("hour-6"));
