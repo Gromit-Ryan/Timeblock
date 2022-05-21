@@ -24,89 +24,89 @@ let currentHour = moment().format('H');
 // Conditional statements to determine if the hour block is in the past,
 // future, or present.
 if (currentHour > hour8) {
-    $('#hour8Text').addClass("future");
+    $('#hour8Text').addClass("past");
 } else if (currentHour < hour8) {
-    $('#hour8Text').addClass('past');
+    $('#hour8Text').addClass('future');
 } else {
     $('#hour8Text').addClass('present');
 }
 
 if (currentHour > hour9) {
-    $('#hour9Text').addClass("future");
+    $('#hour9Text').addClass("past");
 } else if (currentHour < hour9) {
-    $('#hour9Text').addClass('past');
+    $('#hour9Text').addClass('future');
 } else {
     $('#hour9Text').addClass('present');
 }
 
 if (currentHour > hour10) {
-    $('#hour10Text').addClass("future");
+    $('#hour10Text').addClass("past");
 } else if (currentHour < hour10) {
-    $('#hour10Text').addClass('past');
+    $('#hour10Text').addClass('future');
 } else {
     $('#hour10Text').addClass('present');
 }
 
 if (currentHour > hour11) {
-    $('#hour11Text').addClass("future");
+    $('#hour11Text').addClass("past");
 } else if (currentHour < hour11) {
-    $('#hour11Text').addClass('past');
+    $('#hour11Text').addClass('future');
 } else {
     $('#hour11Text').addClass('present');
 }
 
 if (currentHour > hour12) {
-    $('#hour12Text').addClass("future");
+    $('#hour12Text').addClass("past");
 } else if (currentHour < hour12) {
-    $('#hour12Text').addClass('past');
+    $('#hour12Text').addClass('future');
 } else {
     $('#hour12Text').addClass('present');
 }
 
 if (currentHour > hour1) {
-    $('#hour1Text').addClass("future");
+    $('#hour1Text').addClass("past");
 } else if (currentHour < hour1) {
-    $('#hour1Text').addClass('past');
+    $('#hour1Text').addClass('future');
 } else {
     $('#hour1Text').addClass('present');
 }
 
 if (currentHour > hour2) {
-    $('#hour2Text').addClass("future");
+    $('#hour2Text').addClass("past");
 } else if (currentHour < hour2) {
-    $('#hour2Text').addClass('past');
+    $('#hour2Text').addClass('future');
 } else {
     $('#hour2Text').addClass('present');
 }
 
 if (currentHour > hour3) {
-    $('#hour3Text').addClass("future");
+    $('#hour3Text').addClass("past");
 } else if (currentHour < hour3) {
-    $('#hour3Text').addClass('past');
+    $('#hour3Text').addClass('future');
 } else {
     $('#hour3Text').addClass('present');
 }
 
 if (currentHour > hour4) {
-    $('#hour4Text').addClass("future");
+    $('#hour4Text').addClass("past");
 } else if (currentHour < hour4) {
-    $('#hour4Text').addClass('past');
+    $('#hour4Text').addClass('future');
 } else {
     $('#hour4Text').addClass('present');
 }
 
 if (currentHour > hour5) {
-    $('#hour5Text').addClass("future");
+    $('#hour5Text').addClass("past");
 } else if (currentHour < hour5) {
-    $('#hour5Text').addClass('past');
+    $('#hour5Text').addClass('future');
 } else {
     $('#hour5Text').addClass('present');
 }
 
 if (currentHour > hour6) {
-    $('#hour6Text').addClass("future");
+    $('#hour6Text').addClass("past");
 } else if (currentHour < hour6) {
-    $('#hour6Text').addClass('past');
+    $('#hour6Text').addClass('future');
 } else {
     $('#hour6Text').addClass('present');
 }
