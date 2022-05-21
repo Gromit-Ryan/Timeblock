@@ -1,20 +1,22 @@
-var displayTime = document.querySelector('#currentDay');
+$("#currentDay").text(moment());
 
-var currentTime = moment();
+let saveBtn = $('.saveBtn');
 
-var hour8 = 8;
-var hour9 = 9;
-var hour10 = 10;
-var hour11 = 11;
-var hour12 = 12;
-var hour1 = 1;
-var hour2 = 2;
-var hour3 = 3;
-var hour4 = 4;
-var hour5 = 5;
-var hour6 = 6;
+let hour8 = 8;
+let hour9 = 9;
+let hour10 = 10;
+let hour11 = 11;
+let hour12 = 12;
+let hour1 = 13;
+let hour2 = 14;
+let hour3 = 15;
+let hour4 = 16;
+let hour5 = 17;
+let hour6 = 18;
 
-var currentHour = moment().format('H');
+let currentHour = moment().format('H');
+
+console.log(currentHour);
 
 
 if (currentHour > hour8) {
@@ -104,3 +106,33 @@ if (currentHour > hour6) {
 } else {
     $('#hour6Text').addClass('present');
 }
+
+saveBtn.on("click", function() {
+    let time = $(this).siblings(".time").text();
+    let hourText = $(this).siblings(".text").val();
+
+    localStorage.setItem(time, hourText);
+})
+
+function loadPlanner() {
+    $(".time").each(function() {
+        let currentHour = $(this).text();
+        let currentText = localStorage.getItem(currentHour);
+
+        if(currentText !== null) {
+            $(this).siblings(".text")
+        }
+    })
+}
+
+$("#hour8Text").val(localStorage.getItem("hour8"));
+$("#hour9Text").val(localStorage.getItem("hour9"));
+$("#hour10Text").val(localStorage.getItem("hour10"));
+$("#hour11Text").val(localStorage.getItem("hour11"));
+$("#hour12Text").val(localStorage.getItem("hour12"));
+$("#hour1Text").val(localStorage.getItem("hour1"));
+$("#hour2Text").val(localStorage.getItem("hour2"));
+$("#hour3Text").val(localStorage.getItem("hour3"));
+$("#hour4Text").val(localStorage.getItem("hour4"));
+$("#hour5Text").val(localStorage.getItem("hour5"));
+$("#hour6Text").val(localStorage.getItem("hour6"));
