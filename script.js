@@ -1,7 +1,10 @@
+// Put the day at the top of the page
 $("#currentDay").text(moment());
 
+// Grabs the saveBtn from the html and saves it as a variable
 let saveBtn = $('.saveBtn');
 
+// Declaring the hours to compare to the moment.js hour
 let hour8 = 8;
 let hour9 = 9;
 let hour10 = 10;
@@ -14,11 +17,12 @@ let hour4 = 16;
 let hour5 = 17;
 let hour6 = 18;
 
+// Uses moment.js to get the current hour
+// Uses 24 hour
 let currentHour = moment().format('H');
 
-console.log(currentHour);
-
-
+// Conditional statements to determine if the hour block is in the past,
+// future, or present.
 if (currentHour > hour8) {
     $('#hour8Text').addClass("future");
 } else if (currentHour < hour8) {
@@ -107,13 +111,19 @@ if (currentHour > hour6) {
     $('#hour6Text').addClass('present');
 }
 
+//On saveBtn click it will save the text for the block to local storeage
 saveBtn.on("click", function() {
+
+    // Text grabs the text present in the timeblock
     let text = $(this).siblings(".text").val();
+    // Time grabs the parent ID which would be hour-#
     let time = $(this).parent().attr("id");
 
+    // Saves the text and parent ID to local storage
     localStorage.setItem(time, text);
 })
 
+// Gets the texts from local storage and sets it to the block
 $("#hour8Text").val(localStorage.getItem("hour-8"));
 $("#hour9Text").val(localStorage.getItem("hour-9"));
 $("#hour10Text").val(localStorage.getItem("hour-10"));
